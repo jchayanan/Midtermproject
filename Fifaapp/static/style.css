@@ -1,0 +1,109 @@
+.home-bg {
+  height: 100%;
+  /* The image used */
+  background: url(images/arnold.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.standings-bg{
+  height: 100%;
+  /* The image used */
+  background: url(images/mbp.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.competitions-bg{
+  height: 100%;
+  /* The image used */
+  background: url(images/felix.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.teams-bg{
+  height: 100%;
+  /* The image used */
+  background: url(images/cantona.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-bg{
+  height: 100%;
+  /* The image used */
+  background: url(images/stadium.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+table tr td, table tr{
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  
+}
+
+table{
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 50px;
+}
+
+th{
+  color: white;
+  text-align: center;
+  background-color: rgba(56, 56, 56, 0.8);
+}
+
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 30%;
+}
+
+
+.button {
+  display: inline-block;
+  padding: 5px 5px;
+  font-size: 19px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #0f5291;;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #f1c40f}
+
+.button:active {
+  background-color: #f1c40f;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

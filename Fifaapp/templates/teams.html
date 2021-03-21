@@ -1,0 +1,36 @@
+{% extends "base_layout.html" %}
+{% block body %}
+
+<body class="teams-bg">
+<h1 style="color:white;">Teams</h1>
+
+<form class="form-group" method="POST">
+    <input type="text" onkeyup="this.value = this.value.toUpperCase();" type="text" name="teams" id="temas" placeholder="League eg. PL SA ELC BSA">
+    <input class="button" style="vertical-align:middle"type="submit" value="submit">
+</form>
+<h1 style="color: white;">Area: {{data.competition.area.name}}</h1>
+
+<table class="w3-table w3-stripe w3-hoverable">
+    <tr class="w3-light-grey w3-hover-yellow">
+        <th>Name</th>
+        <th>TLA</th>
+        <th>Website</th>
+        <th>Venue</th>
+        <th>Founded</th>
+    </tr>
+
+
+    {% for data in data.teams %}
+    <tr class="w3-light-grey w3-hover-grey">
+        <td><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><image href={{data.crestUrl}} height="20" width="20"/></svg>{{data.name}}</td>
+        <td>{{data.tla}}</td>
+        <td><a href="{{data.website}}" target="_blank">{{data.website}}</a></td>
+        <td>{{data.venue}}</td>
+        <td>{{data.founded}}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+</p1>
+</body>
+{% endblock %}

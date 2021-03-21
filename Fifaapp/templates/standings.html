@@ -1,0 +1,39 @@
+{% extends "base_layout.html" %}
+{% block body %}
+
+<body class="standings-bg">
+    <h1 style="color:white;">Standings </h1>
+    <h1 style="color:white;">2020/2021 Premiere league</h1>
+    <p1 style="color:white;">Last Update: {{data.competition.lastUpdated}}</p1>
+    <table class="w3-table w3-stripe w3-hoverable">
+        <tr>
+            <th>Position</th>
+            <th>Team Name</th>
+            <th>Played Game</th>
+            <th>Won</th>
+            <th>Draw</th>
+            <th>Lost</th>
+            <th>Goals For</th>
+            <th>Goals Against</th>
+            <th>Points</th>
+        </tr>
+        {% for data in data['standings'][0]['table'] %}
+        <tr class="w3-light-grey w3-hover-grey">
+            <td>{{data.position}}</td>
+            <td><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                    <image href={{data.team.crestUrl}} height="20" width="20" />
+                </svg>&nbsp;&nbsp;{{data.team.name}}</td>
+            <td>{{data.playedGames}}</td>
+            <td>{{data.won}}</td>
+            <td>{{data.draw}}</td>
+            <td>{{data.lost}}</td>
+            <td>{{data.goalsFor}}</td>
+            <td>{{data.goalsAgainst}}</td>
+            <td>{{data.points}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+    </p1>
+</body>
+{% endblock %}

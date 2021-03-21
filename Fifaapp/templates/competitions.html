@@ -1,0 +1,38 @@
+{% extends "base_layout.html" %}
+{% block body %}
+
+<body class="competitions-bg">
+  <h1 style="color:white;">Top Scorers</h1>
+
+  <form class="form-group" method="POST">
+    <input type="text" onkeyup="this.value = this.value.toUpperCase();" type="text" name="league" placeholder="League eg. PL SA ELC BSA">
+    <input class="button" style="vertical-align:middle" type="submit" value="submit">
+  </form>
+
+  <h1 style="color:white;">{{data.competition.name}}</h1>
+  <h3 style="color:white;">Start date: {{data.season.startDate}} End date: {{data.season.endDate}}</h3>
+  <p4 style="color:white;">{{data.competition.lastUpdated}}</p4>
+
+  <table class="w3-table w3-stripe w3-hoverable">
+    <tr>
+      <th>Name</th>
+      <th>Nationality</th>
+      <th>Position</th>
+      <th>Team</th>
+      <th>Number of Goals</th>
+    </tr>
+
+
+    {% for data in data.scorers %}
+    <tr class="w3-light-grey w3-hover-grey">
+      <td>{{data.player.name}}</td>
+      <td>{{data.player.nationality}}</td>
+      <td>{{data.player.position}}</td>
+      <td>{{data.team.name}}</td>
+      <td>{{data.numberOfGoals}}</td>
+    </tr>
+    {% endfor %}
+
+  </table>
+</body>
+{% endblock %}

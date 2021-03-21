@@ -1,0 +1,22 @@
+{% extends "base_layout.html" %}
+{% block body %}
+
+<body class="about-bg">
+  <div class="row justify-content-center">
+    {% for i in range(student|length) %}
+    <div class="col-md-4">
+      
+        <img class="resize-image" src="{{student[i].img}}" alt="" width="210" height="210">
+        <figure style="color: rgb(255, 255, 255);   -webkit-text-stroke: 0.8px black;;">
+          <b><h3>{{student[i].student_id}}</h3></b>
+          <div class="row justify-content-center">
+            <h3>{{student[i].name}}</h3>
+          </div>
+        </figure>
+      
+    </div>
+    {% endfor %}
+  </div>
+  </div>
+</body>
+{% endblock %}

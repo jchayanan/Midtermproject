@@ -1,0 +1,31 @@
+{% extends "base_layout.html" %}
+{% block body %}
+<body class="home-bg">
+<div class="container">
+<h1 style="color: white;">LIVE🔴</h1>
+<table class="w3-table w3-stripe w3-hoverable" style="width: 100%;">
+    <thead>
+    <tr>
+        <th scope="col">Date</th>
+        <th scope="col"></th>
+        <th scope="col">Score</th>
+        <th scope="col"></th>
+        <th scope="col">Competition</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for data in data.matches %}
+        <tr class="w3-light-grey w3-hover-grey">
+                <td style="width: 20%;">{{data.utcDate}}</td>
+                <td style="width: 30%; text-align: right;">{{data.homeTeam.name}}</td>
+                <td style="width: 5%; text-align: center;"><b>{{data.score.fullTime.homeTeam}} - {{data.score.fullTime.awayTeam}} </b></td>
+                <td style="width: 30%; text-align: left;">{{data.awayTeam.name}}</td>
+                <td style="width: 15%; text-align: center;">{{data.competition.name}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+</body>
+{% endblock %}
+
